@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfreit <josfreit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfreit <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 15:25:06 by josfreit          #+#    #+#             */
-/*   Updated: 2023/10/07 16:16:08 by josfreit         ###   ########.fr       */
+/*   Created: 2023/10/05 10:53:41 by josfreit          #+#    #+#             */
+/*   Updated: 2023/10/20 16:22:21 by josfreit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
-		return (0);
-	return (1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 /*
-int     main(void)
+int	main(void)
 {
-	printf("%i\n", ft_isalpha('5'));
+	int	funcao;
+	char	*str;
+
+	funcao = 1;
+	str = "teste teste teste";
+	ft_putendl_fd(str, funcao);
 	return (0);
 }*/
